@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Journey | Mohan Jha</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Extends the glowing beam down to the new active step (CI/CD) */
+    .snake-container::before { height: 72% !important; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Mohan Jha</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html" class="active">Journey</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="journey-page-header fade-in">
+    <h1>DevOps Journey</h1>
+    <p style="color: var(--text-secondary); max-width: 600px; margin: 20px auto 0;">
+      A live look at my progression from Infrastructure Engineering to DevOps Architecture. 
+      I believe in mastering the fundamentals before automating them.
+    </p>
+  </div>
+
+  <section class="snake-section fade-in">
+    <div class="container">
+      
+      <div class="snake-container">
+        
+        <div class="snake-step left step-done">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">COMPLETED</span>
+            <h3>Foundations</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fab fa-linux"></i> Linux</span>
+              <span class="tech-badge"><i class="fas fa-network-wired"></i> Network</span>
+              <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step right step-done">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">COMPLETED</span>
+            <h3>Cloud Platforms</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fab fa-aws"></i> AWS</span>
+              <span class="tech-badge"><i class="fab fa-microsoft" style="color: #00A4EF;"></i> Azure</span>
+              <span class="tech-badge"><i class="fas fa-server"></i> EC2 / S3</span>
+              <span class="tech-badge"><i class="fas fa-network-wired"></i> VPC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step left step-done">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">COMPLETED</span>
+            <h3>Scripting & Auto</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-badge"><i class="fas fa-terminal"></i> Boto3</span>
+              <span class="tech-badge"><i class="fas fa-code"></i> Bash</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step right step-done">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">COMPLETED</span>
+            <h3>Containers</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fab fa-docker"></i> Docker</span>
+              <span class="tech-badge"><i class="fas fa-layer-group"></i> Compose</span>
+              <span class="tech-badge"><i class="fas fa-th"></i> Microservices</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step left step-done">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">COMPLETED</span>
+            <h3>Observability</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fas fa-fire"></i> Prometheus</span>
+              <span class="tech-badge"><i class="fas fa-chart-pie"></i> Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step right step-active">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">CURRENT FOCUS</span>
+            <h3>CI/CD</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fab fa-jenkins"></i> Jenkins</span>
+              <span class="tech-badge"><i class="fas fa-infinity"></i> Pipelines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step left step-future">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">UP NEXT</span>
+            <h3>IaC & Config</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fas fa-layer-group"></i> Terraform</span>
+              <span class="tech-badge"><i class="fas fa-cogs"></i> Ansible</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snake-step right step-future">
+          <div class="snake-dot"></div>
+          <div class="snake-content">
+            <span class="snake-label">FUTURE</span>
+            <h3>Orchestration</h3>
+            <div class="tech-stack">
+              <span class="tech-badge"><i class="fas fa-cubes"></i> Kubernetes</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: 50px;">
+    <div class="container" style="text-align:center;">
+       <p style="color: var(--text-secondary);">&copy; 2026 Mohan Jha.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

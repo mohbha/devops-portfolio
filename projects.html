@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Mohan Jha</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Mohan Jha</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="project-header fade-in">
+    <h1>Selected Work</h1>
+    <p style="color: var(--text-secondary);">DevOps, Cloud Automation & Web Development.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="project-detail-card fade-in">
+      <img src="architecture_diagram_Monitoring.png" alt="Observability Stack" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/1c1c1e/2997ff?text=Observability+Stack';">
+      
+      <div>
+        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Containerized Observability Stack</h2>
+        <span class="tag" style="background: var(--accent-blue); margin-bottom: 15px; display:inline-block;">DevOps & Monitoring</span>
+        
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          Architected a 3-container microservices stack orchestrating a custom Python/Flask metrics producer, Prometheus for time-series data scraping, and Grafana for real-time visualization. Engineered a multi-threaded Python agent to poll system kernel metrics and trigger REST API warnings.
+        </p>
+        
+        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
+        <div class="skill-tags" style="margin-bottom: 25px;">
+           <span class="tag">Python</span>
+           <span class="tag">Docker Compose</span>
+           <span class="tag">Prometheus</span>
+           <span class="tag">Grafana</span>
+        </div>
+        
+        <a href="https://github.com/mohbha/System_Monitor" target="_blank" class="cta-btn" style="font-size:14px;">
+          View on GitHub <i class="fab fa-github" style="margin-left:5px;"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-detail-card fade-in">
+      <img src="portfolio_project.png" alt="Cloud Portfolio" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/1c1c1e/30d158?text=Cloud+Portfolio+Auto';">
+      
+      <div>
+        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Cloud Portfolio & Automation</h2>
+        <span class="tag" style="background: #30d158; margin-bottom: 15px; display:inline-block;">AWS Infrastructure</span>
+        
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          Hosted a personal portfolio on AWS S3 with Static Website Hosting enabled, configuring IAM Bucket Policies for secure, least-privilege public access. Developed a Python Infrastructure-as-Code script utilizing Boto3 to automatically upload compiled assets to S3.
+        </p>
+        
+        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
+        <div class="skill-tags" style="margin-bottom: 25px;">
+           <span class="tag">AWS S3</span>
+           <span class="tag">Python (Boto3)</span>
+           <span class="tag">IAM</span>
+           <span class="tag">Linux</span>
+        </div>
+        
+        <a href="index.html" class="cta-btn" style="font-size:14px;">
+          View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="project-detail-card fade-in">
+      <img src="safar.jpg" alt="Safar App" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/111/444?text=Safar+Screenshot';">
+      
+      <div>
+        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">SAFAR</h2>
+        <span class="tag" style="background: #e67e22; margin-bottom: 15px; display:inline-block;">Full Stack Web App</span>
+        
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          A travel booking platform backend deployed dynamically on Render (PaaS). Securely managed environment variables and analyzed production build logs for continuous delivery, solving the clutter issue in modern booking apps.
+        </p>
+        
+        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
+        <div class="skill-tags" style="margin-bottom: 25px;">
+           <span class="tag">Node.js</span>
+           <span class="tag">EJS</span>
+           <span class="tag">MongoDB</span>
+           <span class="tag">Render Deployment</span>
+        </div>
+        
+        <a href="https://safar-eyes.onrender.com/home" target="_blank" class="cta-btn" style="font-size:14px;">
+          View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-detail-card fade-in">
+      <img src="outfit.jpg" alt="Outfit App" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/111/444?text=Outfit+Screenshot';">
+      
+      <div>
+        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Outfit Suggester</h2>
+        <span class="tag" style="background: #9d42f5; margin-bottom: 15px; display:inline-block;">Web Application</span>
+        
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          An intelligent styling assistant where users can curate and share outfit ideas. Key challenge: Implementing the logic to suggest clothes based on weather data and user preferences.
+        </p>
+        
+        <h4 style="color:white; margin-bottom:10px;">Key Features:</h4>
+        <ul style="color:var(--text-secondary); list-style:disc; padding-left:20px; margin-bottom:20px;">
+          <li>External image linking</li>
+          <li>Weather-based logic</li>
+          <li>Responsive Grid Layout</li>
+        </ul>
+        
+        <a href="https://fashionspellsx-2-y11c.onrender.com/home" target="_blank" class="cta-btn" style="font-size:14px;">
+          View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="margin-top: 50px;">
+    <div class="container" style="text-align:center;">
+       <p style="color: var(--text-secondary);">&copy; 2026 Mohan Jha.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
