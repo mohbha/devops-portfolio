@@ -1,10 +1,14 @@
 name: Deploy Portfolio to S3
-
 # 1. THE TRIGGER: When does this run?
 on:
   push:
     branches:
       - main
+  workflow_dispatch:  # <--- Add this exact line right here!
+
+# Tell GitHub to use the modern Node 24 runtime
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 # 2. THE JOB: What server are we using?
 jobs:
