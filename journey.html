@@ -4,15 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Journey | Mohan Jha</title>
+  <meta name="description" content="Follow Mohan Jha's DevOps journey — from Linux foundations to Kubernetes orchestration.">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     /* Extends the glowing beam down to the new active step (CI/CD) */
     .snake-container::before { height: 72% !important; }
   </style>
 </head>
 <body>
+
+  <canvas id="particle-canvas"></canvas>
+  <div class="cursor-glow"></div>
+  <div class="page-transition"></div>
 
   <nav>
     <div class="container nav-content">
@@ -22,24 +26,35 @@
         <a href="journey.html" class="active">Journey</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
+        <a href="https://github.com/mohbha" target="_blank" class="github-link" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <div class="journey-page-header fade-in">
+  <div class="mobile-nav-overlay">
+    <a href="index.html">Home</a>
+    <a href="journey.html">Journey</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://github.com/mohbha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+
+  <div class="journey-page-header" data-scroll="up">
     <h1>DevOps Journey</h1>
     <p style="color: var(--text-secondary); max-width: 600px; margin: 20px auto 0;">
-      A live look at my progression from Infrastructure Engineering to DevOps Architecture. 
+      A live look at my progression from Infrastructure Engineering to DevOps Architecture.
       I believe in mastering the fundamentals before automating them.
     </p>
   </div>
 
-  <section class="snake-section fade-in">
+  <section class="snake-section">
     <div class="container">
-      
       <div class="snake-container">
-        
-        <div class="snake-step left step-done">
+
+        <div class="snake-step left step-done" data-scroll="left">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">COMPLETED</span>
@@ -52,7 +67,7 @@
           </div>
         </div>
 
-        <div class="snake-step right step-done">
+        <div class="snake-step right step-done" data-scroll="right" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">COMPLETED</span>
@@ -66,7 +81,7 @@
           </div>
         </div>
 
-        <div class="snake-step left step-done">
+        <div class="snake-step left step-done" data-scroll="left" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">COMPLETED</span>
@@ -79,7 +94,7 @@
           </div>
         </div>
 
-        <div class="snake-step right step-done">
+        <div class="snake-step right step-done" data-scroll="right" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">COMPLETED</span>
@@ -92,7 +107,7 @@
           </div>
         </div>
 
-        <div class="snake-step left step-done">
+        <div class="snake-step left step-done" data-scroll="left" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">COMPLETED</span>
@@ -104,7 +119,7 @@
           </div>
         </div>
 
-        <div class="snake-step right step-active">
+        <div class="snake-step right step-active" data-scroll="right" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">CURRENT FOCUS</span>
@@ -116,7 +131,7 @@
           </div>
         </div>
 
-        <div class="snake-step left step-future">
+        <div class="snake-step left step-future" data-scroll="left" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">UP NEXT</span>
@@ -128,7 +143,7 @@
           </div>
         </div>
 
-        <div class="snake-step right step-future">
+        <div class="snake-step right step-future" data-scroll="right" data-scroll-delay="100">
           <div class="snake-dot"></div>
           <div class="snake-content">
             <span class="snake-label">FUTURE</span>
@@ -149,5 +164,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
