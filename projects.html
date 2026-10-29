@@ -3,136 +3,171 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects | Mohan Jha</title>
-  <meta name="description" content="DevOps, Cloud Automation & Web Development projects by Mohan Jha.">
+  <title>Projects | Mohan Jha — DevOps & Cloud Portfolio</title>
+  <meta name="description" content="DevOps, Cloud Automation & Web Development projects by Mohan Jha. Containerized stacks, AWS infrastructure, and full-stack applications.">
+  <meta name="author" content="Mohan Jha">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects | Mohan Jha">
+  <meta property="og:description" content="DevOps, Cloud Automation & Web Development projects by Mohan Jha.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <canvas id="particle-canvas"></canvas>
-  <div class="cursor-glow"></div>
-  <div class="page-transition"></div>
+  <a href="#main-content" class="sr-only" style="position:absolute;top:-100px;left:0;padding:10px;background:var(--accent-blue);color:#fff;z-index:10000;transition:top 0.3s ease;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
 
-  <nav>
+  <!-- Background Layers -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="gradient-mesh" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scan-lines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
     <div class="container nav-content">
       <div class="logo">Mohan Jha</div>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="journey.html">Journey</a>
         <a href="projects.html" class="active">Projects</a>
+        <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/mohbha" target="_blank" class="github-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/mohbha" target="_blank" rel="noopener noreferrer" class="github-link" title="GitHub Profile" aria-label="Visit GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
       </div>
-      <button class="hamburger" aria-label="Toggle navigation">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <div class="mobile-nav-overlay">
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" role="navigation" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="journey.html">Journey</a>
     <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
     <a href="contact.html">Contact</a>
-    <a href="https://github.com/mohbha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://github.com/mohbha" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
   </div>
 
-  <div class="project-header" data-scroll="up">
+  <!-- Header -->
+  <div class="project-header" id="main-content" data-scroll="up">
+    <span class="section-label">Portfolio</span>
     <h1>Selected Work</h1>
-    <p style="color: var(--text-secondary);">DevOps, Cloud Automation & Web Development.</p>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 16px auto 0; line-height: 1.7;">DevOps, Cloud Automation &amp; Web Development.</p>
   </div>
 
+  <!-- Projects -->
   <div class="container">
 
+    <!-- Project 1: Observability Stack -->
     <div class="project-detail-card" data-scroll="up">
-      <img src="architecture_diagram_Monitoring.png" alt="Observability Stack" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/1c1c1e/2997ff?text=Observability+Stack';">
-      <div>
-        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Containerized Observability Stack</h2>
-        <span class="tag" style="background: var(--accent-blue); margin-bottom: 15px; display:inline-block;">DevOps & Monitoring</span>
-        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+      <span class="project-number" aria-hidden="true">01</span>
+      <img src="architecture_diagram_Monitoring.png" alt="Containerized Observability Stack architecture diagram showing Docker containers with Prometheus, Grafana, and Flask" class="project-detail-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400/0c0a1d/2997ff?text=Observability+Stack';">
+      <div style="position: relative; z-index: 1;">
+        <span class="section-label" style="margin-bottom: 12px;">DevOps & Monitoring</span>
+        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">Containerized Observability Stack</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; font-size: 15px;">
           Architected a 3-container microservices stack orchestrating a custom Python/Flask metrics producer, Prometheus for time-series data scraping, and Grafana for real-time visualization. Engineered a multi-threaded Python agent to poll system kernel metrics and trigger REST API warnings.
         </p>
-        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
-        <div class="skill-tags" style="margin-bottom: 25px;">
+        <h4 style="color: var(--text-accent); margin-bottom: 10px; font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Tech Stack</h4>
+        <div class="skill-tags" style="margin-bottom: 28px;">
            <span class="tag">Python</span>
            <span class="tag">Docker Compose</span>
            <span class="tag">Prometheus</span>
            <span class="tag">Grafana</span>
         </div>
-        <a href="https://github.com/mohbha/System_Monitor" target="_blank" class="cta-btn" style="font-size:14px;">
-          <span>View on GitHub <i class="fab fa-github" style="margin-left:5px;"></i></span>
+        <a href="https://github.com/mohbha/System_Monitor" target="_blank" rel="noopener noreferrer" class="cta-btn" style="font-size: 14px;">
+          <span>View on GitHub <i class="fab fa-github" style="margin-left: 5px;" aria-hidden="true"></i></span>
         </a>
       </div>
     </div>
 
+    <!-- Project 2: Cloud Portfolio -->
     <div class="project-detail-card" data-scroll="up" data-scroll-delay="100">
-      <img src="portfolio_project.png" alt="Cloud Portfolio" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/1c1c1e/30d158?text=Cloud+Portfolio+Auto';">
-      <div>
-        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Cloud Portfolio & Automation</h2>
-        <span class="tag" style="background: #30d158; margin-bottom: 15px; display:inline-block;">AWS Infrastructure</span>
-        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+      <span class="project-number" aria-hidden="true">02</span>
+      <img src="portfolio_project.png" alt="Cloud Portfolio deployment architecture with AWS S3, IAM, and Boto3" class="project-detail-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400/0c0a1d/30d158?text=Cloud+Portfolio';">
+      <div style="position: relative; z-index: 1;">
+        <span class="section-label" style="margin-bottom: 12px; --accent-blue: #30d158;">AWS Infrastructure</span>
+        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">Cloud Portfolio &amp; Automation</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; font-size: 15px;">
           Hosted a personal portfolio on AWS S3 with Static Website Hosting enabled, configuring IAM Bucket Policies for secure, least-privilege public access. Developed a Python Infrastructure-as-Code script utilizing Boto3 to automatically upload compiled assets to S3.
         </p>
-        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
-        <div class="skill-tags" style="margin-bottom: 25px;">
+        <h4 style="color: var(--text-accent); margin-bottom: 10px; font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Tech Stack</h4>
+        <div class="skill-tags" style="margin-bottom: 28px;">
            <span class="tag">AWS S3</span>
            <span class="tag">Python (Boto3)</span>
            <span class="tag">IAM</span>
            <span class="tag">Linux</span>
         </div>
-        <a href="index.html" class="cta-btn" style="font-size:14px;">
-          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i></span>
+        <a href="index.html" class="cta-btn" style="font-size: 14px;">
+          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left: 5px;" aria-hidden="true"></i></span>
         </a>
       </div>
     </div>
 
+    <!-- Project 3: SAFAR -->
     <div class="project-detail-card" data-scroll="up" data-scroll-delay="200">
-      <img src="safar.jpg" alt="Safar App" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/111/444?text=Safar+Screenshot';">
-      <div>
-        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">SAFAR</h2>
-        <span class="tag" style="background: #e67e22; margin-bottom: 15px; display:inline-block;">Full Stack Web App</span>
-        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+      <span class="project-number" aria-hidden="true">03</span>
+      <img src="safar.jpg" alt="SAFAR travel booking platform interface" class="project-detail-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400/0c0a1d/e67e22?text=Safar';">
+      <div style="position: relative; z-index: 1;">
+        <span class="section-label" style="margin-bottom: 12px; --accent-blue: #e67e22;">Full Stack Web App</span>
+        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">SAFAR</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; font-size: 15px;">
           A travel booking platform backend deployed dynamically on Render (PaaS). Securely managed environment variables and analyzed production build logs for continuous delivery, solving the clutter issue in modern booking apps.
         </p>
-        <h4 style="color:white; margin-bottom:10px;">Tech Stack:</h4>
-        <div class="skill-tags" style="margin-bottom: 25px;">
+        <h4 style="color: var(--text-accent); margin-bottom: 10px; font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Tech Stack</h4>
+        <div class="skill-tags" style="margin-bottom: 28px;">
            <span class="tag">Node.js</span>
            <span class="tag">EJS</span>
            <span class="tag">MongoDB</span>
            <span class="tag">Render Deployment</span>
         </div>
-        <a href="https://safar-eyes.onrender.com/home" target="_blank" class="cta-btn" style="font-size:14px;">
-          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i></span>
+        <a href="https://safar-eyes.onrender.com/home" target="_blank" rel="noopener noreferrer" class="cta-btn" style="font-size: 14px;">
+          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left: 5px;" aria-hidden="true"></i></span>
         </a>
       </div>
     </div>
 
+    <!-- Project 4: Outfit Suggester -->
     <div class="project-detail-card" data-scroll="up" data-scroll-delay="300">
-      <img src="outfit.jpg" alt="Outfit App" class="project-detail-img" onerror="this.src='https://via.placeholder.com/600x400/111/444?text=Outfit+Screenshot';">
-      <div>
-        <h2 style="font-size: 32px; margin-bottom: 10px; color:white;">Outfit Suggester</h2>
-        <span class="tag" style="background: #9d42f5; margin-bottom: 15px; display:inline-block;">Web Application</span>
-        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+      <span class="project-number" aria-hidden="true">04</span>
+      <img src="outfit.jpg" alt="Outfit Suggester web application showing fashion recommendations" class="project-detail-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400/0c0a1d/9d42f5?text=Outfit+Suggester';">
+      <div style="position: relative; z-index: 1;">
+        <span class="section-label" style="margin-bottom: 12px; --accent-blue: #9d42f5;">Web Application</span>
+        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">Outfit Suggester</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; font-size: 15px;">
           An intelligent styling assistant where users can curate and share outfit ideas. Key challenge: Implementing the logic to suggest clothes based on weather data and user preferences.
         </p>
-        <h4 style="color:white; margin-bottom:10px;">Key Features:</h4>
-        <ul style="color:var(--text-secondary); list-style:disc; padding-left:20px; margin-bottom:20px;">
+        <h4 style="color: var(--text-accent); margin-bottom: 10px; font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Key Features</h4>
+        <ul style="color: var(--text-secondary); list-style: disc; padding-left: 20px; margin-bottom: 24px; line-height: 2; font-size: 15px;">
           <li>External image linking</li>
           <li>Weather-based logic</li>
           <li>Responsive Grid Layout</li>
         </ul>
-        <a href="https://fashionspellsx-2-y11c.onrender.com/home" target="_blank" class="cta-btn" style="font-size:14px;">
-          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left:5px;"></i></span>
+        <a href="https://fashionspellsx-2-y11c.onrender.com/home" target="_blank" rel="noopener noreferrer" class="cta-btn" style="font-size: 14px;">
+          <span>View Live App <i class="fas fa-external-link-alt" style="margin-left: 5px;" aria-hidden="true"></i></span>
         </a>
       </div>
     </div>
 
   </div>
 
+  <!-- Footer -->
   <footer style="margin-top: 50px;">
-    <div class="container" style="text-align:center;">
-       <p style="color: var(--text-secondary);">&copy; 2026 Mohan Jha.</p>
+    <div class="container" style="text-align: center;">
+       <p style="color: var(--text-secondary); font-family: var(--font-mono, monospace); font-size: 12px;">&copy; 2026 Mohan Jha. All rights reserved.</p>
     </div>
   </footer>
 

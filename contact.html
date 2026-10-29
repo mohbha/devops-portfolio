@@ -3,46 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Mohan Jha</title>
-  <meta name="description" content="Get in touch with Mohan Jha — open for DevOps & Cloud opportunities.">
+  <title>Contact | Mohan Jha — Get in Touch</title>
+  <meta name="description" content="Get in touch with Mohan Jha — open for DevOps & Cloud opportunities. Download resume, email, call, or connect on LinkedIn.">
+  <meta name="author" content="Mohan Jha">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Mohan Jha">
+  <meta property="og:description" content="Open for DevOps & Cloud opportunities. Let's connect.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <canvas id="particle-canvas"></canvas>
-  <div class="cursor-glow"></div>
-  <div class="page-transition"></div>
+  <a href="#main-content" class="sr-only" style="position:absolute;top:-100px;left:0;padding:10px;background:var(--accent-blue);color:#fff;z-index:10000;transition:top 0.3s ease;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+  <!-- Background Layers -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="gradient-mesh" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scan-lines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page-transition" aria-hidden="true"></div>
 
   <!-- Navigation -->
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="container nav-content">
       <div class="logo">Mohan Jha</div>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="journey.html">Journey</a>
         <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
         <a href="contact.html" class="active">Contact</a>
-        <a href="https://github.com/mohbha" target="_blank" class="github-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/mohbha" target="_blank" rel="noopener noreferrer" class="github-link" title="GitHub Profile" aria-label="Visit GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
       </div>
-      <button class="hamburger" aria-label="Toggle navigation">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <div class="mobile-nav-overlay">
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" role="navigation" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="journey.html">Journey</a>
     <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
     <a href="contact.html">Contact</a>
-    <a href="https://github.com/mohbha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://github.com/mohbha" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
   </div>
 
   <!-- Header -->
-  <div class="project-header" data-scroll="up">
+  <div class="project-header" id="main-content" data-scroll="up">
+    <span class="section-label">Connect</span>
     <h1>Get in Touch</h1>
-    <p style="color: var(--text-secondary);">Open for DevOps & Cloud opportunities.</p>
+    <p style="color: var(--text-secondary); max-width: 480px; margin: 16px auto 0; line-height: 1.7;">Open for DevOps &amp; Cloud opportunities. Let's build something great.</p>
   </div>
 
   <!-- Main Grid -->
@@ -50,43 +73,47 @@
     <div class="bento-grid">
 
       <!-- 1. Resume / CV Download -->
-      <div class="card cv-card" style="grid-column: span 12; padding: 50px;" data-scroll="scale">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 60px; height: 60px; margin: 0 auto 20px auto; fill: #ff453a;">
-          <path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 38.6C310.1 219.5 256 287.4 256 368c0 59.1 29.1 111.3 73.7 143.3c-3.2 .5-6.4 .7-9.7 .7L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 64zM384 272c-53 0-96 43-96 96s43 96 96 96s96-43 96-96s-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z"/>
+      <div class="card cv-card" style="grid-column: span 12; padding: 60px 40px;" data-scroll="scale">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 52px; height: 52px; margin: 0 auto 24px auto; color: var(--accent-blue); filter: drop-shadow(0 0 12px rgba(41, 151, 255, 0.4));" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        <h2 style="margin-bottom: 10px;">Download My Resume</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 25px; max-width: 500px;">
-          Get a detailed look at my experience, AWS certifications, and technical skillset in PDF format.
+        <h2 style="margin-bottom: 12px; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">Download My Resume</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 28px; max-width: 480px; line-height: 1.7; font-size: 15px;">
+          Get a detailed look at my experience, AWS &amp; Azure certifications, and technical skillset in PDF format.
         </p>
         <a href="resume.pdf" download="Mohan_Jha_Resume.pdf" target="_blank" class="cta-btn">
-          <span><i class="fas fa-download" style="margin-right: 8px;"></i> Download CV</span>
+          <span><i class="fas fa-download" style="margin-right: 8px;" aria-hidden="true"></i> Download CV</span>
         </a>
       </div>
 
       <!-- 2. Email -->
-      <a href="mailto:mohbha123@gmail.com" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center;" data-scroll="left" data-scroll-delay="100">
-        <i class="fas fa-envelope contact-icon"></i>
+      <a href="mailto:mohbha123@gmail.com" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center; padding: 40px 24px;" data-scroll="left" data-scroll-delay="100" aria-label="Send email to mohbha123@gmail.com">
+        <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
         <div class="contact-link">mohbha123@gmail.com</div>
         <div class="contact-sub">Email Me</div>
       </a>
 
       <!-- 3. Phone -->
-      <a href="tel:+918700346932" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center;" data-scroll="right" data-scroll-delay="100">
-        <i class="fas fa-phone contact-icon"></i>
+      <a href="tel:+918700346932" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center; padding: 40px 24px;" data-scroll="right" data-scroll-delay="100" aria-label="Call +91 8700346932">
+        <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
         <div class="contact-link">+91 8700346932</div>
         <div class="contact-sub">Call Me</div>
       </a>
 
       <!-- 4. LinkedIn -->
-      <a href="https://www.linkedin.com/in/mohanjha1/" target="_blank" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center;" data-scroll="left" data-scroll-delay="200">
-        <i class="fab fa-linkedin contact-icon"></i>
+      <a href="https://www.linkedin.com/in/mohanjha1/" target="_blank" rel="noopener noreferrer" class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center; padding: 40px 24px;" data-scroll="left" data-scroll-delay="200" aria-label="Visit LinkedIn profile">
+        <i class="fab fa-linkedin contact-icon" style="color: #0A66C2;" aria-hidden="true"></i>
         <div class="contact-link">LinkedIn Profile</div>
         <div class="contact-sub">Let's Connect</div>
       </a>
 
       <!-- 5. Location -->
-      <div class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center;" data-scroll="right" data-scroll-delay="200">
-        <i class="fas fa-map-marker-alt contact-icon" style="color: #4caf50;"></i>
+      <div class="card tilt-card" style="grid-column: span 6; align-items: center; text-align: center; padding: 40px 24px;" data-scroll="right" data-scroll-delay="200">
+        <i class="fas fa-map-marker-alt contact-icon" style="color: var(--accent-green);" aria-hidden="true"></i>
         <div class="contact-link">Greater Noida, India</div>
         <div class="contact-sub">House no 10, Bhati Colony, Surajpur</div>
       </div>
@@ -96,11 +123,11 @@
 
   <!-- Footer -->
   <footer style="margin-top: 50px;">
-    <div class="container" style="text-align:center;">
-       <p style="color: var(--text-secondary);">&copy; 2026 Mohan Jha.</p>
-       <div class="socials" style="justify-content:center; margin-top:15px;">
-         <a href="https://www.linkedin.com/in/mohanjha1/" target="_blank"><i class="fab fa-linkedin"></i></a>
-         <a href="https://github.com/mohbha" target="_blank"><i class="fab fa-github"></i></a>
+    <div class="container" style="text-align: center;">
+       <p style="color: var(--text-secondary); font-family: var(--font-mono, monospace); font-size: 12px;">&copy; 2026 Mohan Jha. All rights reserved.</p>
+       <div class="socials" style="justify-content: center; margin-top: 16px;">
+         <a href="https://www.linkedin.com/in/mohanjha1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+         <a href="https://github.com/mohbha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
        </div>
     </div>
   </footer>
