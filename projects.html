@@ -100,16 +100,16 @@
       <img src="portfolio_project.png" alt="Cloud Portfolio deployment architecture with AWS S3, IAM, and Boto3" class="project-detail-img" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400/0c0a1d/30d158?text=Cloud+Portfolio';">
       <div style="position: relative; z-index: 1;">
         <span class="section-label" style="margin-bottom: 12px; --accent-blue: #30d158;">AWS Infrastructure</span>
-        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">Cloud Portfolio &amp; Automation</h2>
+        <h2 style="font-size: 30px; margin-bottom: 12px; color: white; font-weight: 800; letter-spacing: -1px;">Cloud Portfolio &amp; CI/CD</h2>
         <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8; font-size: 15px;">
-          Hosted a personal portfolio on AWS S3 with Static Website Hosting enabled, configuring IAM Bucket Policies for secure, least-privilege public access. Developed a Python Infrastructure-as-Code script utilizing Boto3 to automatically upload compiled assets to S3.
+          Hosted a portfolio on a private S3 bucket behind CloudFront (HTTPS, CDN); a GitHub Actions pipeline deploys on every push via a Python/Boto3 sync script that handles MIME types.
         </p>
         <h4 style="color: var(--text-accent); margin-bottom: 10px; font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Tech Stack</h4>
         <div class="skill-tags" style="margin-bottom: 28px;">
            <span class="tag">AWS S3</span>
+           <span class="tag">CloudFront</span>
+           <span class="tag">GitHub Actions</span>
            <span class="tag">Python (Boto3)</span>
-           <span class="tag">IAM</span>
-           <span class="tag">Linux</span>
         </div>
         <a href="index.html" class="cta-btn" style="font-size: 14px;">
           <span>View Live App <i class="fas fa-external-link-alt" style="margin-left: 5px;" aria-hidden="true"></i></span>

@@ -21,8 +21,8 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-    /* Extends the glowing beam down to the current active step (CI/CD) */
-    .snake-container::before { height: 72% !important; }
+    /* Extends the glowing beam down to the current active step (IaC & Config) */
+    .snake-container::before { height: 82% !important; }
   </style>
 </head>
 <body>
@@ -145,26 +145,26 @@
           </div>
         </div>
 
-        <div class="snake-step right step-active" data-scroll="right" data-scroll-delay="100">
+        <div class="snake-step right step-done" data-scroll="right" data-scroll-delay="100">
           <div class="snake-dot" aria-hidden="true"></div>
           <div class="snake-content">
-            <span class="snake-label">Current Focus</span>
+            <span class="snake-label">Completed</span>
             <h3>CI/CD</h3>
             <div class="tech-stack">
-              <span class="tech-badge"><i class="fab fa-jenkins" aria-hidden="true"></i> Jenkins</span>
-              <span class="tech-badge"><i class="fas fa-infinity" aria-hidden="true"></i> Pipelines</span>
+              <span class="tech-badge"><i class="fab fa-aws" aria-hidden="true"></i> CodePipeline</span>
+              <span class="tech-badge"><i class="fab fa-aws" aria-hidden="true"></i> CodeBuild</span>
+              <span class="tech-badge"><i class="fab fa-github" aria-hidden="true"></i> GitHub Actions</span>
             </div>
           </div>
         </div>
 
-        <div class="snake-step left step-future" data-scroll="left" data-scroll-delay="100">
+        <div class="snake-step left step-active" data-scroll="left" data-scroll-delay="100">
           <div class="snake-dot" aria-hidden="true"></div>
           <div class="snake-content">
-            <span class="snake-label">Up Next</span>
+            <span class="snake-label">Current Focus</span>
             <h3>IaC &amp; Config</h3>
             <div class="tech-stack">
               <span class="tech-badge"><i class="fas fa-layer-group" aria-hidden="true"></i> Terraform</span>
-              <span class="tech-badge"><i class="fas fa-cogs" aria-hidden="true"></i> Ansible</span>
             </div>
           </div>
         </div>
