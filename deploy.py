@@ -20,8 +20,8 @@ def deploy_website():
             continue
 
         for file in files:
-            # Skip the deployment script itself and hidden system files
-            if file == 'deploy.py' or file.startswith('.'):
+            # Skip python scripts, documentation, sensitive data files, and hidden system files
+            if file.endswith('.py') or file.endswith('.md') or file == 'cv_data.json' or file.startswith('.'):
                 continue
 
             # Get the full local path of the file
