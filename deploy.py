@@ -21,7 +21,7 @@ def deploy_website():
 
         for file in files:
             # Skip python scripts, documentation, sensitive data files, and hidden system files
-            if file.endswith('.py') or file == 'cv_data.json' or file == 'README.md' or file.startswith('.'):
+            if file.endswith('.py') or file.endswith('.md') or file == 'cv_data.json' or file.startswith('.'):
                 continue
 
             # Get the full local path of the file
