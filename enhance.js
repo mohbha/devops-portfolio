@@ -3,7 +3,7 @@
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
     const motion = fine && !reduce && window.gsap;
-    const TECH = ['AWS', 'Azure', 'Terraform', 'Docker', 'ECS', 'CodeBuild', 'CloudFront', 'RDS', 'Python', 'Boto3', 'PowerShell', 'Prometheus', 'Grafana', 'GitHub Actions', 'Linux'];
+    const TECH = ['AWS', 'Azure', 'Docker', 'ECS', 'CodeBuild', 'CloudFront', 'RDS', 'Python', 'Boto3', 'PowerShell', 'Prometheus', 'Grafana', 'GitHub Actions', 'Linux'];
     const HUBS = ['CloudFront', 'ALB', 'ECS', 'RDS', 'S3', 'Lambda', 'CodeBuild'];
     const add = (cls) => document.body.appendChild(Object.assign(document.createElement('div'), { className: cls }));
     const mouse = { cx: -9999, cy: -9999 };
@@ -141,6 +141,8 @@
     }
 
     const init = () => {
+    document.querySelectorAll('[aria-current]').forEach((a) => a.removeAttribute('aria-current'));
+    document.querySelectorAll('.nav-links a.active, .mobile-nav-overlay a.active').forEach((a) => a.setAttribute('aria-current', 'page'));
         const hero = document.querySelector('.hero');
         if (hero && !document.querySelector('.marquee')) {
             const set = TECH.map((t) => `<span>${t}</span>`).join('');

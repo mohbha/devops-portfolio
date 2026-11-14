@@ -10,6 +10,7 @@
 let lenis = null;
 
 function initLenis() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // chunk 5: respect reduced motion
   if (typeof Lenis === 'undefined') return;
   try {
     lenis = new Lenis({
